@@ -58,7 +58,8 @@ func run(f finder) error {
 	// that is stored inside this interface variable? No, not directly.
 	// All you know is the data has a method named "find".
 	// ./example5.go:61:26: f.host undefined (type finder has no field or method host)
-	log.Println("queried", f.host)
+
+	//=============log.Println("queried", f.host)
 
 	// You can use a type assertion to get a copy of the userSVC pointer
 	// that is stored inside the interface.

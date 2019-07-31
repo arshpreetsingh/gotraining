@@ -35,7 +35,6 @@ func main() {
 		u,
 
 		// Store a copy of the address of the user value in the interface value.
-		&u,
 	}
 
 	// Change the name field on the user value.

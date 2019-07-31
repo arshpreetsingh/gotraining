@@ -13,7 +13,7 @@ func main() {
 	fmt.Printf("Bfr[%s] : ", friends[1])
 
 	for i := range friends {
-		friends[1] = "Jack"
+		friends[1] = "Arsh"
 
 		if i == 1 {
 			fmt.Printf("Aft[%s]\n", friends[1])
@@ -23,6 +23,7 @@ func main() {
 	// Using the value semantic form of the for range.
 	friends = [5]string{"Annie", "Betty", "Charley", "Doug", "Edward"}
 	fmt.Printf("Bfr[%s] : ", friends[1])
+	fmt.Println("this is econd element of Glang ->", friends[2])
 
 	for i, v := range friends {
 		friends[1] = "Jack"

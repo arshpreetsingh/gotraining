@@ -4,14 +4,14 @@
 // Sample program to show the order of channel communication for unbuffered,
 // buffered and closing channels based on the specification.
 // https://golang.org/ref/mem#tmp_7
-package main
+package hello
 
 import "fmt"
 
 func main() {
-	unBuffered()
+	//unBuffered()
 	buffered()
-	closed()
+	//closed()
 }
 
 // With unbuffered channels, the receive happens before the corresponding send.
@@ -36,7 +36,7 @@ func unBuffered() {
 // The write to a happens before the send on c, which happens before the
 // corresponding receive on c completes, which happens before the print.
 func buffered() {
-	c := make(chan int, 10)
+	c := make(chan int, 1000)
 	var a string
 
 	go func() {

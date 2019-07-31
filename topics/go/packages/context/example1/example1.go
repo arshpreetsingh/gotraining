@@ -23,7 +23,7 @@ func main() {
 	traceID := TraceID("f47ac10b-58cc-0372-8567-0e02b2c3d479")
 
 	// Declare a key with the value of zero of type userKey.
-	const traceIDKey TraceIDKey = 0
+	var traceIDKey TraceIDKey = 0
 
 	// Store the traceID value inside the context with a value of
 	// zero for the key type.
@@ -32,11 +32,18 @@ func main() {
 	// Retrieve that traceID value from the Context value bag.
 	if uuid, ok := ctx.Value(traceIDKey).(TraceID); ok {
 		fmt.Println("TraceID:", uuid)
+		fmt.Println("this is anoter stuf we need to look for as well")
+		fmt.Println(ctx.Value(traceIDKey))
+		fmt.Println("////////////////////////")
+		fmt.Println(ctx.Value(traceIDKey).(TraceID))
 	}
 
 	// Retrieve that traceID value from the Context value bag not
 	// using the proper key type.
-	if _, ok := ctx.Value(0).(TraceID); !ok {
-		fmt.Println("TraceID Not Found")
-	}
+	// if _, ok := ctx.Value(0).(TraceID); !ok {
+	// 	fmt.Println("TraceID Not Found")
+	// 	fmt.Println("this is ok", ok)
+	// 	//	fmt.Println("this is anoter Moreeeeeeeeee   stuff we need to look for as well")
+	// 	//	fmt.Println(ctx.Value(traceIDKey).(TraceID))
+	// }
 }

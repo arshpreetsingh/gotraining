@@ -15,7 +15,7 @@ func (d *duration) notify() {
 }
 
 func main() {
-	duration(42).notify()
+	duration.notify()
 
 	// ./example3.go:18: cannot call pointer method on duration(42)
 	// ./example3.go:18: cannot take the address of duration(42)

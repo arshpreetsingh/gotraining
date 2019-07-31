@@ -58,6 +58,8 @@ func main() {
 
 	// Iterate over the slice and display
 	// each station.
+	fmt.Println("this is full staritons we are having")
+	fmt.Println(stations[0])
 	for _, station := range stations {
 		fmt.Printf("%+v\n\n", station)
 	}

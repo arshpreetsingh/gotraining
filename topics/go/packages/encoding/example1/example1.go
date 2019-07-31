@@ -60,6 +60,7 @@ func main() {
 
 	// Declare a variable of type UserContext.
 	var uc userContext
+	//var pinfo preferenceInfo
 
 	// Unmarshal the JSON document into the variable.
 	if err := json.Unmarshal([]byte(document), &uc); err != nil {
@@ -67,16 +68,16 @@ func main() {
 		return
 	}
 
-	fmt.Printf("%+v\n\n", uc)
+	fmt.Printf("%+v\n\n", &uc)
 
 	// Declare a pointer of type UserContext.
-	var ucp *userContext
+	var ucp userContext
 
 	// Unmarshal the JSON document into the nil pointer.
 	if err := json.Unmarshal([]byte(document), &ucp); err != nil {
 		fmt.Println(err)
 		return
 	}
-
-	fmt.Printf("%+v", *ucp)
+	fmt.Println("this is ucp we are having with us as well")
+	fmt.Printf("%+v", ucp)
 }

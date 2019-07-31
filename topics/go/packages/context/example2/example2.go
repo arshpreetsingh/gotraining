@@ -22,7 +22,7 @@ func main() {
 
 		// Wait for the work to finish. If it takes too long move on.
 		select {
-		case <-time.After(100 * time.Millisecond):
+		case <-time.After(12 * time.Millisecond):
 			fmt.Println("moving on")
 
 		case <-ctx.Done():
@@ -31,7 +31,7 @@ func main() {
 	}()
 
 	// Simulate work.
-	time.Sleep(50 * time.Millisecond)
+	time.Sleep(1 * time.Millisecond)
 
 	// Report the work is done.
 	cancel()

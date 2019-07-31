@@ -38,7 +38,7 @@ func main() {
 
 	// Start the set.
 	court <- 1
-
+	time.Sleep(1)
 	// Wait for the game to finish.
 	wg.Wait()
 }
@@ -53,6 +53,7 @@ func player(name string, court chan int) {
 
 			// If the channel was closed we won.
 			fmt.Printf("Player %s Won\n", name)
+			//time.Sleep(1)
 			return
 		}
 

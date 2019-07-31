@@ -14,12 +14,19 @@ func main() {
 	fmt.Println(12345)
 	fmt.Println(3.14159)
 	fmt.Println(true)
+	var a interface{}
+	a = "hello"
+	fmt.Println("this is a", a)
+	a = 23453535
+	fmt.Println("this is a", a)
+	a = []int{2, 3, 5, 7, 11, 13}
+	fmt.Println("this is a", a)
 
 	// How can we do the same?
-	myPrintln("Hello, world")
-	myPrintln(12345)
-	myPrintln(3.14159)
-	myPrintln(true)
+	// myPrintln("Hello, world")
+	// myPrintln(12345)
+	// myPrintln(3.14159)
+	// myPrintln(true)
 
 	// - An interface is satisfied by any piece of data when the data exhibits
 	// the full method set of behavior defined by the interface.
@@ -34,15 +41,15 @@ func main() {
 	// interface as an exception when it is reasonable and practical to do so.
 }
 
-func myPrintln(a interface{}) {
-	switch v := a.(type) {
-	case string:
-		fmt.Printf("Is string  : type(%T) : value(%s)\n", v, v)
-	case int:
-		fmt.Printf("Is int     : type(%T) : value(%d)\n", v, v)
-	case float64:
-		fmt.Printf("Is float64 : type(%T) : value(%f)\n", v, v)
-	default:
-		fmt.Printf("Is unknown : type(%T) : value(%v)\n", v, v)
-	}
-}
+// func myPrintln(a interface{}) {
+// 	switch v := a.(type) {
+// 	case string:
+// 		fmt.Printf("Is string  : type(%T) : value(%s)\n", v, v)
+// 	case int:
+// 		fmt.Printf("Is int     : type(%T) : value(%d)\n", v, v)
+// 	case float64:
+// 		fmt.Printf("Is float64 : type(%T) : value(%f)\n", v, v)
+// 	default:
+// 		fmt.Printf("Is unknown : type(%T) : value(%v)\n", v, v)
+// 	}
+// }

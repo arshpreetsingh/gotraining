@@ -17,7 +17,7 @@ type data struct {
 func main() {
 
 	// Set a deadline.
-	deadline := time.Now().Add(150 * time.Millisecond)
+	deadline := time.Now().Add(250 * time.Millisecond)
 
 	// Create a context that is both manually cancellable and will signal
 	// a cancel at the specified date/time.

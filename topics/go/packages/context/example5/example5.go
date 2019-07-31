@@ -25,7 +25,7 @@ func main() {
 	}
 
 	// Create a context with a timeout of 50 milliseconds.
-	ctx, cancel := context.WithTimeout(req.Context(), 50*time.Millisecond)
+	ctx, cancel := context.WithTimeout(req.Context(), 500*time.Millisecond)
 	defer cancel()
 
 	// Declare a new transport and client for the call.
